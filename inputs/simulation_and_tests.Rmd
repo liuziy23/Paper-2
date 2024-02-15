@@ -1,0 +1,120 @@
+---
+title: "Simulation_data"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#### Workspace setup ####
+# install.packages("tidyverse")
+# install.packages("janitor")
+
+library(tidyverse)
+library(janitor)
+```
+
+# Experiment 1
+```{r}
+#### Simulate ####
+#Set a seed to always generate the same random data whenever we run the same code.
+set.seed(111)
+
+n <- 50 # 50 participants rated the Escalation of Commitment (0~100)
+
+# Repeat the each action 50 times to simulate an estimated rating of escalation of commitment value for that action
+simulated_data1 <-
+  tibble(
+    action =
+      c(rep("Escalation", n), rep("De-escalation", n)),
+    rating =
+      sample(x = 0:100, size = n*2, replace = TRUE) # Rating range is 0 ~ 100
+  )
+
+head(simulated_data1)
+```
+
+```{r}
+### Tests simulated data 1 ###
+# Test if there are two actions within the dataset "simulated_data1"
+simulated_data1$action |>
+  unique() |>
+  length() == 2
+# Test if 'rating' values are within the range 0-100
+all(simulated_data1$rating >= 0 & simulated_data1$rating <= 100)
+# Test if 'rating' values are integers
+simulated_data1$rating |> class() == "integer"
+# Test if variable 'action' are character
+simulated_data1$action |> class() == "character"
+```
+
+
+# Experiment 3
+```{r}
+#### Simulate ####
+#Set a seed to always generate the same random data whenever we run the same code.
+set.seed(333)
+
+n <- 50 # 50 participants rated the Escalation of Commitment (0~100)
+
+# Repeat the each action 50 times to simulate an estimated rating of escalation of commitment value for that action
+simulated_data3 <-
+  tibble(
+    action =
+      c(rep("Escalation", n), rep("De-escalation", n), rep("Ambiguous", n)),
+    rating =
+      sample(x = 0:100, size = n*3, replace = TRUE) # Rating range is 0 ~ 100
+  )
+
+head(simulated_data3)
+```
+
+```{r}
+### Tests simulated data 3 ###
+# Test if there are two actions within the dataset "simulated_data1"
+simulated_data3$action |>
+  unique() |>
+  length() == 3
+# Test if 'rating' values are within the range 0-100
+all(simulated_data3$rating >= 0 & simulated_data3$rating <= 100)
+# Test if 'rating' values are integers
+simulated_data3$rating |> class() == "integer"
+# Test if variable 'action' are character
+simulated_data3$action |> class() == "character"
+```
+
+# Experiment 4
+```{r}
+#### Simulate ####
+#Set a seed to always generate the same random data whenever we run the same code.
+set.seed(444)
+
+n <- 50 # 50 participants rated the Escalation of Commitment (0~100)
+
+# Repeat the each action 50 times to simulate an estimated rating of escalation of commitment value for that action
+simulated_data4 <-
+  tibble(
+    action =
+      c(rep("Escalation", n), rep("De-escalation", n), rep("Ambiguous", n)),
+    rating =
+      sample(x = 0:100, size = n*3, replace = TRUE) # Rating range is 0 ~ 100
+  )
+
+head(simulated_data4)
+```
+
+```{r}
+### Tests simulated data 4 ###
+# Test if there are two actions within the dataset "simulated_data1"
+simulated_data4$action |>
+  unique() |>
+  length() == 3
+# Test if 'rating' values are within the range 0-100
+all(simulated_data4$rating >= 0 & simulated_data4$rating <= 100)
+# Test if 'rating' values are integers
+simulated_data4$rating |> class() == "integer"
+# Test if variable 'action' are character
+simulated_data4$action |> class() == "character"
+```
+
