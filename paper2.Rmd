@@ -32,152 +32,122 @@ knitr::opts_chunk$set(echo = TRUE)
 #install.packages("tidyverse")
 #install.packages("ggplot2")
 #install.packages("car")
+#install.packages("janitor")
 library(tidyverse)
 library(ggplot2)
 library(car)
+library(janitor)
 ```
 
 ```{r, echo=TRUE, include=TRUE, cache = FALSE, echo=FALSE}
 # import file from CSV
-alldata <- read.csv("inputs/data/action-inaction-eoc-experiment-1-data.csv", header=TRUE, fileEncoding = "UTF-8-BOM") 
+data1 <-read_csv(
+    file = "inputs/data/cleaned_experiment_1_data.csv",
+    show_col_types = FALSE
+  )
 
-# calculate condition
-alldata$condition <- 0
-for (i in 1:nrow(alldata)){
-  if (!is.na(alldata$EOC1_me[i])) (alldata$condition[i] <- 1)
-  if (!is.na(alldata$EOC1_other[i])) (alldata$condition[i] <- 2)
-  if (!is.na(alldata$DEC1_me[i])) (alldata$condition[i] <- 3)
-  if (!is.na(alldata$DEC1_other[i])) (alldata$condition[i] <- 4)
-}
+data3 <-read_csv(
+    file = "inputs/data/cleaned_experiment_3_data.csv",
+    show_col_types = FALSE
+  )
 
-#calcaulte age 
-alldata$age <- alldata$birth+9
-
-# some recoding to get the condition
-alldata$blankeocdec<- recode(alldata$condition, "c(1,2)=1;c(3,4)=2; else=NA")
-alldata$blankme<- recode(alldata$condition, "c(1,3)=1;c(2,4)=2; else=NA")
-alldata$condition<-factor(alldata$condition,levels = c(1,2,3,4), 
-                          labels=c("Escalation-action / Self-initiated", 
-                                   "Escalation-action / Other-initiated",
-                                   "Deescalation-action / Self-initiated",
-                                   "Deescalation-action / Other-initiated"))
-#value labels
-alldata$blankeocdec<-factor(alldata$blankeocdec,levels = c(1,2), labels=c("Escalation-action", "Deescalation-action"))
-alldata$blankme<-factor(alldata$blankme,levels = c(1,2), labels=c("Self-initiated", "Other-initiated"))
-
-# calcaulte attention checks for exclusions
-alldata$include<-(alldata$blankeocdec=="Escalation-action" & alldata$manchk2<=3) |
-  (alldata$blankeocdec=="Deescalation-action" & alldata$manchk2>=3)
-
-# including only those who passed the attention checks
-alldata<-subset(alldata, include==1)
-
-# the effects for the 'other initiated conditions' are stronger, but in this manuscript we focus on the 'self initiated' conditions.
-alldata<-subset(alldata, blankme=="Self-initiated")
-
-
-# referring the labels in the condition variable
-xlabel<-"Escalation-action" #name condition 1
-ylabel<-"Deescalation-action" #name condition 2
-
-factorlabel<-"blankeocdec" 
-measurelabel<-"esc1"  
-xlabelstring<-"Action framing" 
-ylabelstring<-"Escalation of commitment (0-100)"   
+data4 <-read_csv(
+    file = "inputs/data/cleaned_experiment_4_data.csv",
+    show_col_types = FALSE
+  )
 ```
 
-```{r, echo=FALSE, include=FALSE, echo=FALSE}
-#Set your alpha level and confidence interval
-alpha<-0.05
-ConfInt<-0.95
+```{r echo=TRUE, include=TRUE, cache = FALSE, echo=FALSE}
+#Subset my dataset
+subset_data3_escal_deescal <- subset(data3, action_framing %in% c("Escalation-action", "Deescalation-action"))
 
-#Alternative hypothesis: specify "two.sided" (for x<>y), "less" (for x<y) or "greater" (for x>y)
-H1<-"two.sided"
+subset_data3_escal_ambig <- subset(data3, action_framing %in% c("Escalation-action", "Ambiguous"))
 
-bootstraps<-2000
+subset_data3_deescal_ambig <- subset(data3, action_framing %in% c("Deescalation-action", "Ambiguous"))
 
-options(scipen=20) #disable scientific notation for numbers smaller than x (i.e., 10) digits (e.g., 4.312e+22)
+subset_data4_escal_deescal <- subset(data4, action_framing %in% c("Escalation-action", "Deescalation-action"))
 
-#Remove other conditions in your datafile (only keep groups specified above)
-alldata<-subset(alldata, alldata[[factorlabel]]==xlabel|alldata[[factorlabel]]==ylabel)
+subset_data4_escal_ambig <- subset(data4, action_framing %in% c("Escalation-action", "Ambiguous"))
 
-x.alldata<-subset(alldata, alldata[[factorlabel]]==xlabel)
-y.alldata<-subset(alldata, alldata[[factorlabel]]==ylabel)
-x<-x.alldata[[measurelabel]]
-y<-y.alldata[[measurelabel]]
-
-# Calculate 95% CI
-
-bsci <- function(data.frame, group.var=match(factorlabel,names(alldata)), dv.var=match(measurelabel,names(alldata)), difference=FALSE, pooled.error=FALSE, conf.level=ConfInt) {
-  data <- subset(alldata, select=c(group.var, dv.var))
- fact <- factor(data[[1]], levels = c(xlabel,ylabel))
- dv <- data[[2]]
- J <- nlevels(fact)
- N <- length(dv)
-    ci.mat <- matrix(,J,3, dimnames=list(levels(fact), c('lower', 'mean', 'upper')))
-    ci.mat[,2] <- tapply(dv, fact, mean)
-    n.per.group <- tapply(dv, fact, length)
-    if(difference==TRUE) diff.factor= 2^0.5/2 else diff.factor=1
-    if(pooled.error==TRUE) {
-  for(i in 1:J) {
-   moe <- summary(lm(dv ~ 0 + fact))$sigma/(n.per.group[[i]])^0.5 * qt(1-(1-conf.level)/2,N-J) * diff.factor
-   ci.mat[i,1] <- ci.mat[i,2] - moe
-   ci.mat[i,3] <- ci.mat[i,2] + moe
-   }
-  }
- if(pooled.error==FALSE) {
-   for(i in 1:J) {
-    group.dat <- subset(data, data[1]==levels(fact)[i])[[2]]
-    moe <- sd(group.dat)/sqrt(n.per.group[[i]]) * qt(1-(1-conf.level)/2,n.per.group[[i]]-1) * diff.factor
-    ci.mat[i,1] <- ci.mat[i,2] - moe
-    ci.mat[i,3] <- ci.mat[i,2] + moe
-  }
- }
-    ci.mat
-}
-
-#change matrix output from functions to dataframe, add CI from between, add labels and means 
-ci.sum<-as.data.frame(bsci(alldata, group.var=match(factorlabel,names(alldata)), dv.var=match(measurelabel,names(alldata)), difference=TRUE))
-ci.sum[[factorlabel]] <- c(xlabel,ylabel)
-ci.sum[[measurelabel]] <- c(mean(x),mean(y))
-
-sd1<-sd(x) #standard deviation of group 1
-sd2<-sd(y) #standard deviation of group 2
-n1 <- length(x) #number of individuals
-n2 <- length(y) #number of individuals
-m_diff<-mean(x)-mean(y)
+subset_data4_deescal_ambig <- subset(data4, action_framing %in% c("Deescalation-action", "Ambiguous"))
 ```
+
 # Results
-## Experiment 1 Figure 1
-Figure \@ref(fig:fig1) is a replication of Figure 1 in Experiment 1 of the original paper, and it presents a violin plot alongside means and 95% confidence intervals (CIs) comparing two conditions: "Escalation-action" and "Deescalation-action." This visual representation combines the distribution of data points with a summary statistic of the mean and the variability, which are 95% CIs for each condition. Mean escalation levels, depicted by dots, reveal higher scores for the "Escalation-action" (average of 57.21) compared to the "Deescalation-action" (average of 39.8).  The 95% confidence interval indicates that if we were to take multiple random samples from the same population, 95% of the sample means would fall within this interval. This provides a quantified measure of the data's credibility. As a result, the violin plot's contour reveals the broader distributions of escalation actions, signifying a higher commonality of actions within that range.
-```{r fig1, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Means and 95% CI, violin plot"}
-# Assuming 'factorlabel' holds the name of the column for grouping/factor variable
-# and 'measurelabel' holds the name of the column for the measurement variable.
+## Experiment 1
+Figure \@ref(fig:fig1) with categories replicates the figure 4 in the original paper experiment 1, and it provides a quick visual indication of the data's distribution, highlighting any potential skewness by showing the medians' positions relative to the interquartile ranges (IQR). It compares participants' willingness to continue with a project across two scenarios — "Escalation-action" and "Deescalation-action" — on a commitment scale from 0 (not at all willing) to 100 (completely willing). The plot reveals a wider IQR for "Deescalation-action," suggesting a greater diversity in the participants' responses. In contrast, the median — represented by the line within each box — is higher for "Escalation-action," indicating a general tendency for participants in this scenario to be more willing to escalate their commitment. Furthermore, "Escalation-action" extends to have a higher maximum value, signifying that some participants are particularly inclined to increase their commitment level when compared to those in the "Deescalation-action" group.
+```{r fig1, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+ggplot(data1, aes(x = action_framing, y = escalation_of_commitment)) +
+  geom_boxplot() +
+  labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 1",
+       x = "Action Framing",
+       y = "Escalation of Commitment Rating (0-100)") +
+  theme_minimal()
 
-# Update the data frames to use character representations directly
-ci.sum$factor_as_char <- as.character(ci.sum[[factorlabel]])
-alldata$factor_as_char <- as.character(alldata[[factorlabel]])
-
-# Create the plot
-ggplot(ci.sum, aes(x=factor_as_char, y=get(measurelabel), group=1)) +
-  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1, size=1) +
-  geom_point(size=2) +
-  geom_violin(data=alldata, aes(x=factor_as_char, group=factor_as_char), alpha=0) +
-  ylab(ylabelstring) + 
-  xlab(xlabelstring) + 
-  theme_bw(base_size=14) +
-  theme(panel.grid.major.x = element_blank())
 ```
 
-## Experiment 1 Figure 4
-Figure \@ref(fig:fig2) with categories replicates the figure 4 in the original paper experiment 1, and it provides a quick visual indication of the data's distribution, highlighting any potential skewness by showing the medians' positions relative to the interquartile ranges (IQR). It compares participants' willingness to continue with a project across two scenarios — "Escalation-action" and "Deescalation-action" — on a commitment scale from 0 (not at all willing) to 100 (completely willing). The plot reveals a wider IQR for "Deescalation-action," suggesting a greater diversity in the participants' responses. In contrast, the median — represented by the line within each box — is higher for "Escalation-action," indicating a general tendency for participants in this scenario to be more willing to escalate their commitment. Furthermore, "Escalation-action" extends to have a higher maximum value, signifying that some participants are particularly inclined to increase their commitment level when compared to those in the "Deescalation-action" group.
+
+## Experiment 3 
 ```{r fig2, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
-ggplot(alldata, aes(x=.data[[factorlabel]], y=.data[[measurelabel]])) +
+ggplot(subset_data3_escal_deescal, aes(x = action_framing, y = escalation_of_commitment)) +
   geom_boxplot() +
-  ylab(ylabelstring) +
-  xlab(xlabelstring) +
-  theme_bw(base_size=14) +
-  theme(panel.grid.major.x = element_blank())
+  labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 3",
+       x = "Action Framing",
+       y = "Escalation of Commitment Rating (0-100)") +
+  theme_minimal()
+
+```
+
+## Experiment 3 Figure 8
+```{r fig3, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+ggplot(subset_data3_escal_ambig, aes(x = action_framing, y = escalation_of_commitment)) +
+  geom_boxplot() +
+  labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 3",
+       x = "Action Framing",
+       y = "Escalation of Commitment Rating (0-100)") +
+  theme_minimal()
+```
+
+## Experiment 3 Figure 12
+```{r fig4, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+ggplot(subset_data3_deescal_ambig, aes(x = action_framing, y = escalation_of_commitment)) +
+  geom_boxplot() +
+  labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 3",
+       x = "Action Framing",
+       y = "Escalation of Commitment Rating (0-100)") +
+  theme_minimal()
+```
+
+## Experiment 4 Figure 4
+```{r fig5, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+ggplot(subset_data4_escal_deescal, aes(x = action_framing, y = escalation_of_commitment)) +
+  geom_boxplot() +
+  labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 4",
+       x = "Action Framing",
+       y = "Escalation of Commitment Rating (0-100)") +
+  theme_minimal()
+
+```
+
+## Experiment 4 Figure 8
+```{r fig6, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+ggplot(subset_data4_escal_ambig, aes(x = action_framing, y = escalation_of_commitment)) +
+  geom_boxplot() +
+  labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 4",
+       x = "Action Framing",
+       y = "Escalation of Commitment Rating (0-100)") +
+  theme_minimal()
+
+```
+
+## Experiment 4 Figure 12
+```{r fig7, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+ggplot(subset_data4_deescal_ambig, aes(x = action_framing, y = escalation_of_commitment)) +
+  geom_boxplot() +
+  labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 4",
+       x = "Action Framing",
+       y = "Escalation of Commitment Rating (0-100)") +
+  theme_minimal()
+
 ```
 
 # Conclusion

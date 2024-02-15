@@ -1,0 +1,75 @@
+---
+title: "Data Cleaning Experiment 4"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+``````{r, echo=FALSE, include=FALSE, cache = FALSE}
+#### Workspace setup ####
+knitr::opts_chunk$set(echo = TRUE)
+# install.packages("tidyverse")
+# install.packages("janitor")
+# install.packages("car")
+library(tidyverse)
+library(janitor)
+library(car)
+```
+
+
+# Contrasting Escalation-action with Deescalation-action
+
+```{r, echo=TRUE, include=TRUE, cache = FALSE}
+# import file from CSV
+raw_data_4 <- read.csv("action-inaction-eoc-experiment-4-data.csv", header=TRUE, fileEncoding = "UTF-8-BOM") 
+
+# calculate condition
+raw_data_4$condition <- 0
+raw_data_4$escalation <- 0
+for (i in 1:nrow(raw_data_4)){
+  if (!is.na(raw_data_4$ai_int1[i])){
+    raw_data_4$condition[i] <- 1
+    raw_data_4$escalation[i] <- raw_data_4$ai_decision2[i]
+  }
+  if (!is.na(raw_data_4$ia_int1[i])){
+    raw_data_4$condition[i] <- 2
+    raw_data_4$escalation[i] <- raw_data_4$ia_decision2[i]
+  }
+  if (!is.na(raw_data_4$am_int1[i])){
+    raw_data_4$condition[i] <- 3
+    raw_data_4$escalation[i] <- raw_data_4$am_decision2[i]
+  }
+}
+
+#value labels
+raw_data_4$condition<-factor(raw_data_4$condition,levels = c(1,2,3), labels=c("Escalation-action", "Deescalation-action", "Ambiguous"))
+
+head(raw_data_4)
+```
+
+```{r}
+# Clean Data
+cleaned_data_4 <-
+  raw_data_4 |>
+  select(
+    condition,
+    escalation
+  )
+
+cleaned_data_4 <-
+  cleaned_data_4 |>
+  rename(
+    action_framing = condition,
+    escalation_of_commitment = escalation
+  )
+
+head(cleaned_data_4)
+```
+
+```{r}
+write_csv(
+  x = cleaned_data_4,
+  file = "cleaned_experiment_4_data.csv"
+)
+```
+
