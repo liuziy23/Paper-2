@@ -1,13 +1,13 @@
 ---
 title: "Psychological mechanisms in project investment decisions: the role of psychological burden"
 author: Yanyu Wu, Ziyi Liu, Hechen Zhang
-thanks: "Code and data are available at: A replication of various aspects in this paper are available at: https://osf.io/c6wm5/"
+thanks: "Code and data are available at: https://github.com/liuziy23/Paper-2.git A replication of various aspects in this paper are available at: https://osf.io/c6wm5/"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "Abstract.
 Decision makers in project management often have to make difficult decisions about whether to continue supporting projects that are at risk of failure. The hypothesis developed by Gilad Feldman and Kin Fai Ellick Wong states that when people receive adverse feedback, their decisions are influenced by the framework of their actions. According to the study, even though a project may not be the best choice, decision makers may view it as a positive reaction to a previous adverse outcome; Therefore, decision makers should be mindful of the implications of the framework for action [@feldman2018action]. In the process of restoring the experimental data, we also found that the commitment tendency of decision-makers is significantly affected by psychological stress, and the decision-making process is crucial to change the outcome of decision-making. The conclusions we draw are similar to those in the original article."
 output: bookdown::pdf_document2
 toc: TRUE
-
+bibliography: references.bib
 ---
 # Introduction
 Introduction: In the face of non-recoverable costs that have already been incurred, individuals often make irrational decisions because of the sunk cost fallacy. This concept describes when people mistakenly consider costs that have already been spent and cannot be recovered when making decisions [@tversky1996reality]. For example, if we pay $30 for a movie ticket, only to find that the ticket is lost when we arrive at the theater, we are faced with two choices: buy a new ticket or choose to leave. Decision-making in this context can be further analyzed through an action framework that distinguishes the psychological difference between viewing a choice as an "action" versus viewing it as an "inaction." Girard-feldman and Jianhui Huang's research shows that this framework significantly influences individuals' behavioral choices when faced with a difficult situation, especially in the context of whether to continue investing in a failed project.
@@ -23,15 +23,18 @@ All data processing and analysis were conducted using the R programming language
 # Data
 ## Data Source and Methodology
 ### Experiment 1
-The data from the first experiment are provided by a total of 104 undergraduate students from a university in Hong Kong who participated in exchange for partial course credit. This is a psychological study focusing on escalation of commitment, specifically investigating how individuals decide to continue or discontinue investment in a project when faced with negative feedback and a competitive threat. The study utilized a scenario in which participants, acting as vice presidents of a high-tech firm, had to decide on the future of a radar-scrambling device project after discovering that a competitor had launched a superior product. The participants were divided into two conditions: escalation-as-action, where continuing the project required active budget allocation, and de-escalation-as-action, where stopping the project required active intervention. Their willingness to proceed with the project was measured on a scale from 0 to 100, and they were asked to explain their decisions. This setup provides a controlled environment to examine how framing the decision (as either an action or inaction) influences commitment to a failing course of action. The results could offer insights into decision-making processes in business, helping leaders understand how framing and presentation of choices can impact managerial decisions and organizational outcomes.
+The data [@Feldman_Wong_2023]from the first experiment are provided by a total of 104 undergraduate students from a university in Hong Kong who participated in exchange for partial course credit. This is a psychological study focusing on escalation of commitment, specifically investigating how individuals decide to continue or discontinue investment in a project when faced with negative feedback and a competitive threat. The study utilized a scenario in which participants, acting as vice presidents of a high-tech firm, had to decide on the future of a radar-scrambling device project after discovering that a competitor had launched a superior product. The participants were divided into two conditions: escalation-as-action, where continuing the project required active budget allocation, and de-escalation-as-action, where stopping the project required active intervention. Their willingness to proceed with the project was measured on a scale from 0 to 100, and they were asked to explain their decisions. This setup provides a controlled environment to examine how framing the decision (as either an action or inaction) influences commitment to a failing course of action. The results could offer insights into decision-making processes in business, helping leaders understand how framing and presentation of choices can impact managerial decisions and organizational outcomes.
 
 ### Experiment 3
 In the third experiment, a new dimension labeled "ambiguous" was introduced into the data analysis. This experiment engaged 299 American participants from MTurk, who were recruited through TurkPrime.com. These participants were evenly distributed into three distinct groups to test the effects of different escalation framings: escalation-as-action, de-escalation-as-action, and ambiguous. While retaining similarities to the setup in Experiment 1, this iteration featured a novel approach to budget distribution. Specifically, in the escalation-as-action scenario, funding was released in two separate instances: an initial disbursement at the commencement of the project, followed by a subsequent allocation three years later to advance to the next phase. Conversely, in the de-escalation-as-action scenario, the entire project budget was pre-approved and allocated from the company’s multi-year budget.
 
 At the three-year mark, having expended half of the budgeted 10 million dollars, participants learned of a competing firm that had launched a similar yet superior product. As the decision-makers, they faced the crucial choice of whether to continue funding the remainder of the project. The ambiguous condition introduced a new dynamic, requiring participants to make a decision between continuing with the project or halting it, without explicit guidance towards action or inaction, echoing the uncertainty faced in the original study by [@arkes1985psychology]. This addition aimed to explore how ambiguity in decision-making contexts affects the propensity for escalation of commitment.
 
-## Attributes
+### Experiment 4
+Experiment 4 involved 229 undergraduate students from Hong Kong. Participants were once again asked to decide on the project's continuation, rating their willingness to proceed on a scale similar to that used in Experiment 3.
 
+## Attributes
+The cleaned dataset from Experiment 1 includes variables related to action framing and the escalation of commitment. It features two experimental conditions that alter the framing of escalation: "escalation-as-action" and "de-escalation-as-action." Participants expressed their readiness to persist with the project by rating their willingness on a scale from 0 to 100, where 0 signifies an absolute refusal to proceed, and 100 indicates a complete willingness to continue. The cleaned datasets from Experiments 3 and 4 introduced a new category, "ambiguous," to the variable of action framing.
 ```{r setup, include=FALSE}
 # Workplace Setup
 knitr::opts_chunk$set(echo = TRUE)
@@ -77,98 +80,110 @@ subset_data4_deescal_ambig <- subset(data4, action_framing %in% c("Deescalation-
 ## Experiment 1: Contrasting Escalation-action with Deescalation-action
 
 Figure \@ref(fig:fig1) with categories replicates the figure 4 in the original paper experiment 1, and it provides a quick visual indication of the data's distribution, highlighting any potential skewness by showing the medians' positions relative to the interquartile ranges (IQR). It compares participants' willingness to continue with a project across two scenarios — "Escalation-action" and "Deescalation-action" — on a commitment scale from 0 (not at all willing) to 100 (completely willing). The plot reveals a wider IQR for "Deescalation-action," suggesting a greater diversity in the participants' responses. In contrast, the median — represented by the line within each box — is higher for "Escalation-action," indicating a general tendency for participants in this scenario to be more willing to escalate their commitment. Furthermore, "Escalation-action" extends to have a higher maximum value, signifying that some participants are particularly inclined to increase their commitment level when compared to those in the "Deescalation-action" group.
-```{r fig1, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+```{r fig1, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=5, fig.height=4, dpi=300, fig.cap="Boxplot"}
 ggplot(data1, aes(x = action_framing, y = escalation_of_commitment)) +
   geom_boxplot() +
   labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 1",
        x = "Action Framing",
        y = "Escalation of Commitment Rating (0-100)") +
-  theme_minimal()
-
+  theme_minimal() +
+  theme(plot.title = element_text(size = rel(0.8))) 
 ```
 
-
+\newpage
 ## Experiment 3: Contrasting Escalation-action with De-escalation-action 
 
 Figure 4, replicated in Figure \@ref(fig:fig2), provides a comparative visual analysis of decision-making behavior in two distinct scenarios: "Escalation-action" and "De-escalation-action," as per Experiment 3 of the original study. The box plot illustrates the distribution of participants' commitment levels on a scale from 0 to 100, where 0 indicates no willingness to continue with a project, and 100 reflects complete willingness. The plot highlights the position of the median within the interquartile range (IQR) to signal central tendencies and variability in commitment. The "Escalation-action" group exhibits a higher median with an average of 49.54, suggesting a stronger inclination towards project continuation. In addition, the “de-escalation – action group has a lower median with an average of 38.94. The range also stretches higher for "Escalation-action," pointing to a subset of participants with an exceptionally strong commitment to escalation. Participants in the condition framing action as escalation were more prone to increase their commitment compared to those in the condition framing action as de-escalation.
-```{r fig2, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+```{r fig2, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=5, fig.height=4, dpi=300, fig.cap="Boxplot"}
 ggplot(subset_data3_escal_deescal, aes(x = action_framing, y = escalation_of_commitment)) +
   geom_boxplot() +
   labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 3",
        x = "Action Framing",
        y = "Escalation of Commitment Rating (0-100)") +
-  theme_minimal()
+  theme_minimal() +
+  theme(plot.title = element_text(size = rel(0.8)))
 
 ```
-
+\newpage
 ## Experiment 3: Contrasting Escalation-action with Ambiguous
 
 In Figure \@ref(fig:fig3), we replicated the same experiment as Experiment 3 from the original study, comparing "escalation-action" with "ambiguous" scenarios. Under the ambiguous condition, participants were presented with a different scenario than in previous experiments, facing a decision to continue or terminate the experiment without any clear action or inaction. The boxplot reveals that the IQR for "Escalation-action" is wider than for "ambiguous," indicating a greater variance in participants' scores for "escalation-action." Participants rated their willingness to continue the experiment on a commitment scale from 0 to 100, where 100 signifies a strong desire to continue. The results showed that the mean score for "escalation-action" (49.54) was higher than for "ambiguous" (41.81), although the difference was not significant. This suggests that participants were more inclined to escalate their commitment in such scenarios. The figure also showed participants willing to choose "escalation-action" scored higher than those in the "ambiguous" group, above 75, indicating a preference to increase their commitment level compared to the "ambiguous" group.
 
-```{r fig3, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+```{r fig3, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=5, fig.height=4, dpi=300, fig.cap="Boxplot"}
 ggplot(subset_data3_escal_ambig, aes(x = action_framing, y = escalation_of_commitment)) +
   geom_boxplot() +
   labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 3",
        x = "Action Framing",
        y = "Escalation of Commitment Rating (0-100)") +
-  theme_minimal()
+  theme_minimal() +
+  theme(plot.title = element_text(size = rel(0.8)))
 ```
 
+\newpage
 ## Experiment 3: Contrasting Ambiguous with Deescalation-action
 
 In Figure \@ref(fig:fig4), we repeated the same experiment as Experiment 3 from the original paper, comparing the willingness of two groups of participants to continue with a project: "de-escalation-action" and "ambiguous" group. The boxplot shows that the "de-escalation" group has a wider IQR, suggesting larger maximum value, smaller minimum value, and more variability compared to the "ambiguous" data. However, the mean score for "de-escalation-action" (38.94) is lower than for "ambiguous" (41.81), despite the small difference and the means being close. The larger the means are, the more willingly the participants are going to escalate their commitment. This indicates that participants were more inclined to escalate their commitment in ambiguous situations than in the "de-escalation-action" group.
 
-```{r fig4, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+```{r fig4, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=5, fig.height=4, dpi=300, fig.cap="Boxplot"}
 ggplot(subset_data3_deescal_ambig, aes(x = action_framing, y = escalation_of_commitment)) +
   geom_boxplot() +
   labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 3",
        x = "Action Framing",
        y = "Escalation of Commitment Rating (0-100)") +
-  theme_minimal()
+  theme_minimal() +
+  theme(plot.title = element_text(size = rel(0.8)))
 ```
 
-## Experiment 4: Contrasting Escalation-action with Deescalation-action
+\newpage
 
+
+## Experiment 4: Contrasting Escalation-action with Deescalation-action
 In Figure \@ref(fig:fig5), we expanded on Experiment 3 by assessing participants' expectations of failure versus success and their willingness to continue with the project. Participants were asked four questions, considering two choices and outcomes—action or inaction, and negative or positive—then rated their feelings. The scale was 0-100, with 100 meaning absolute willingness to continue, and 0 indicating a desire to terminate the project. Figure 5 replicates Experiment 4 from the original study, comparing the scores of "escalation-action" and "de-escalation-action." The boxplot shows that "escalation-action" had a higher average (54.34) compared to "de-escalation-action" (43.96), indicating a stronger tendency to escalate, especially after considering potential decisions and anticipated emotional outcomes. The "de-escalation-action" data showed greater diversity, as indicated by the interquartile range (IQR).
 
-```{r fig5, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+```{r fig5, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=5, fig.height=4, dpi=300, fig.cap="Boxplot"}
 ggplot(subset_data4_escal_deescal, aes(x = action_framing, y = escalation_of_commitment)) +
   geom_boxplot() +
   labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 4",
        x = "Action Framing",
        y = "Escalation of Commitment Rating (0-100)") +
-  theme_minimal()
+  theme_minimal() +
+  theme(plot.title = element_text(size = rel(0.8)))
 
 ```
 
+\newpage
 ## Experiment 4: Contrasting Escalation-action with Ambiguous
 
 In Figure \@ref(fig:fig6), we replicates Experiment 4 in original study, comparing the "escalation-action" group and "ambiguous" group's willingness to continue the project, now incorporating participants' outcome expectations. The boxplot illustrates both groups' scores on their decision to proceed with the experiment, where 100 signifies a strong desire to continue, and 0 signifies a decision to stop. It highlights that the "escalation-action" group's average score is 54.34, indicating a stronger inclination to proceed compared to the "ambiguous" group's average of 46.75. However, the "ambiguous" group displays a wider IQR, suggesting greater variability in willingness to continue. Despite introducing some new conditions in the experiment, the data aligns with the results from figure \@ref(fig:fig3), showing that participants continued to be willing to proceed with the project in the "escalation-action" scenario.
 
-```{r fig6, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+```{r fig6, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=5, fig.height=4, dpi=300, fig.cap="Boxplot"}
 ggplot(subset_data4_escal_ambig, aes(x = action_framing, y = escalation_of_commitment)) +
   geom_boxplot() +
   labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 4",
        x = "Action Framing",
        y = "Escalation of Commitment Rating (0-100)") +
-  theme_minimal()
+  theme_minimal() +
+  theme(plot.title = element_text(size = rel(0.8)))
 
 ```
 
+\newpage
 ## Experiment 4: Contrasting Deescalation-action with Ambiguous
 
 In Figure \@ref(fig:fig7), the experiment from Experiment 4 of original paper was replicated, comparing the willingness of different groups of participants to continue the project between "de-escalation-action" and "ambiguous" conditions. The boxplot shows that although the "de-escalation-action" group's maximum value is slightly higher than that of the ambiguous group, its mean score is lower than the ambiguous group's, at 43.96 versus 46.75, respectively. Higher scores indicate a greater desire to escalate commitment. This data suggests that compared to the "de-escalation-action" group, participants in the ambiguous group were more inclined to want the project to continue. This finding aligns with the results from Figure \@ref(fig:fig4), indicating that under various conditions, participants in the ambiguous group are more inclined to escalate their commitment.
 
-```{r fig7, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+```{r fig7, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=5, fig.height=4, dpi=300, fig.cap="Boxplot"}
 ggplot(subset_data4_deescal_ambig, aes(x = action_framing, y = escalation_of_commitment)) +
   geom_boxplot() +
   labs(title = "The Boxplot of Escalation of Commitment vs. Action Framing in Experiment 4",
        x = "Action Framing",
        y = "Escalation of Commitment Rating (0-100)") +
-  theme_minimal()
+  theme_minimal() +
+  theme(plot.title = element_text(size = rel(0.8)))
 
 ```
 
+\newpage
 # Discussion
 
 ## Why do escalation groups favor carrying out initiatives to completion?  
@@ -187,5 +202,6 @@ This study complements the research results of Gilad Feldman and Huang Jianhui, 
 ## Weakness and next step ##
 Although the study provided a wealth of information, it also had certain limitations. For example, the experimental design is too simplistic because people know that the choices made do not affect real life, and participants may know that they are being observed, which may influence their choices. In reality people may be affected by more factors such as financial stress and time emotionally invested, which may be difficult to fully replicate in a laboratory setting. In addition, the sample of participants is too simple, only the data of Hong Kong students, different ethnic groups and different age groups were not included in the experiment. To improve the generality of the findings, more ethnically diverse participants should be included in future studies. In order to more accurately simulate the real world decision-making environment, more complex experimental situations must be created. The direction of future research is how to apply these results to the real world to make more informed decisions. With more research, we will be able to better understand the impact of complex human psychology on the decision-making process. This understanding will enable us to create more successful project outcomes.
 
+\newpage
 # References
 
