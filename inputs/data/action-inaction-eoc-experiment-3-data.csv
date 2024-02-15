@@ -1,0 +1,300 @@
+﻿consent_1,consentint2,ai_int1,ai_int2,ai_int3,ai_quiz1,ai_quiz2,ai_quiz3,ai_quiz4,ai_quiz5,ai_quiz6,ai_int4,ai_int5,ai_decision,ai_action,ia_int1,ia_int2,ia_int3,ia_quiz1,ia_quiz2,ia_quiz3,ia_quiz4,ia_quiz5,ia_quiz6,ia_int4,ia_int5,ia_decision,ia_action,am_int1,am_int2,am_int3,am_quiz1,am_quiz2,am_quiz3,am_int4,am_int5,am_decision,am_explain,am_noaction,am_proceed,am_terminate,age,gender
+1,1,1,1,1,3,1,2,1,1,2,1,1,50,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,25,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,70,3, , , , , , , , , , , , , ,34,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,90,Competition brings innovation so having a competing product would help make our better.,1,1,1,39,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,75,5, , , , , , , , , , , , , ,23,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,80,3, , , , , , , , , , , , , ,37,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,70,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,24,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,4, , , , , , , , , , , , , ,33,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,27,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,40,I feel the sunken cost of the 5 million dollars as a factor to keep going.  It may be better to cut our losses and focus on another project.,1,2,1,32,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,5,i would almost certainly stop this project.  the other firm's product is better and i could use the money i'd be saving for another project with a better chance of success.,1,2,1,60,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,35,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,4, , , , , , , , , , , , , ,26,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,75,3, , , , , , , , , , , , , ,32,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,20,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,34,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,100,"The project is already in progress and has used half of the budget. Even though there is a competitor that has beat us to the punch, ours will still be one of very few that have this technology.",1,2,1,39,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,26,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,0,There is no sense in spending more money to bring a product to the market that is already behind.,1,1,1,70,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,20,4, , , , , , , , , , , , , ,31,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,"The fact that a competitor already has a product with a better design, and that we are another 3 years and $5 million away from entering the market, makes the risk too high to continue.",1,1,1,51,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,"I don't have enough information to know whether or not to proceed. If I actually was the manager, I'd sure hope I'd have more details before making such a big decision.",1,2,1,27,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,75,2, , , , , , , , , , , , , ,35,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,20,5, , , , , , , , , , , , , ,55,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,15,4, , , , , , , , , , , , , ,27,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,85,I would proceed with the project and try to analyze the competitions product and try to improve on that design to make an even better product that we originally thought was possible.,2,1,1,35,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,65,2, , , , , , , , , , , , , ,30,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,80,2, , , , , , , , , , , , , ,39,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,50,3, , , , , , , , , , , , , ,27,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,While we have invested 5 million dollars already it would be risky to invest 5 million possible dollars to make this happen or to make it better than the competition who still could beat us.,1,1,1,30,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,75,"I think that we are on budget and going well, so maybe there is still a chance we can improve our project and stay on task.",1,2,1,31,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,50,5, , , , , , , , , , , , , ,43,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,35,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,4, , , , , , , , , , , , , ,47,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,15,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,30,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,25,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,80,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,28,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,5, , , , , , , , , , , , , ,27,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,35,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,21,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,27,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,30,"I think we would have to go back a long ways, but not necessarily scrap it. We just need a better idea.",1,1,1,38,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,75,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,21,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,55,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,29,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,70,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,42,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,75,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,42,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,50,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,20,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,51,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,"Unless someone above me (President/CEO) disagrees, I'm likely to view the $5 million we've already spent as a sunk cost and unenthusiastic chasing good money with bad.",1,2,1,37,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,80,"Although the $5 million has already been spent and another product is on the market, there is a chance the other company's product will not operate correctly. I would recommend moving forward and completing the project.",2,1,1,30,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,4, , , , , , , , , , , , , ,33,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,75,If you already spent that much go for it,1,1,1,19,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,80,4, , , , , , , , , , , , , ,32,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,WOULD CONTINUE ONLY IF MODIFICATIONS COULD BE MADE TO IMPROVE UPON THE PRODUCT THAT HAS BEEN RELEASED ALREADY.  wOULD BE DIFFICULT TO LOSE ALL PROGRESS MADE.,1,1,1,50,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,30,"Though the loss of time and money is painful, it doesn't make much sense to put even more time and money into a product that will be crushed by the competition.",1,2,1,37,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,25,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,57,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,90,2, , , , , , , , , , , , , ,35,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,25,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,30,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,15,"Half the money is already spent, that's sunk cost, but we still have 5 million dollars left and 3 years to invest in something else that could be more profitable. There's not much point continuing to waste resources in a product that will be obsolete on arival.",1,2,1,35,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,75,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,30,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,75,I would continue with the project. Competition is good and ill have to rely on the marketing team to up selling my project if it is truely not as good as the other companies and make some adjustment based on their mistakes,2,1,1,26,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,27,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,29,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,75,I feel its more likely than not to have success with this project,1,2,2,26,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,20,5, , , , , , , , , , , , , ,23,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,100,I am not a quitter and I will proceed with my work since we are halfway there. I believe there will always be competition and we have to keep at it,2,1,1,66,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,4, , , , , , , , , , , , , ,22,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,47,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,20,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,28,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,26,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,Because we would have to make changes to the product to make it better then the competions. WHich might make us go over budget,1,1,2,26,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,5, , , , , , , , , , , , , ,33,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,40,"I am not sure if it is worth it, we may lose more money",2,1,1,23,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,100,I would find a better edge over the project already out there.,2,1,1,55,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,0,The time and money spent thus far are irrelevant - they are a sunk cost on what is now a failed project. Going to market will only cost even more money and make the failure larger.,1,2,1,47,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,80,2, , , , , , , , , , , , , ,55,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,100,5, , , , , , , , , , , , , ,19,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,40,I would recommend redeploying the remaining 5 million towards something that we could have a competitive advantage offering. Spending it on the existing project would be throwing good money after bad.,1,1,1,51,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,75,2, , , , , , , , , , , , , ,24,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,30,"At this point it would seem more economical to see if the technology could be re-purposed into a new utility, three years and five million more of r&d to go against a superior product is a tall hill to climb.",1,2,1,32,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,100,0, , , , , , , , , , , , , ,30,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,30,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,38,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,2,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,28,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,58,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,75,I would go on with the project. It is all in marketing and I would make sure to advertise that my product is better,1,1,1,43,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,40,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,99,4, , , , , , , , , , , , , ,25,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,75,Because i liked this.,1,2,1,28,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,45,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,89,We’re not looking to hit a requirement. We’re not looking to build a feature. We’re looking to try to build an experience that almost perfectly lands in the way that the user’s daily fabric is woven. So we have to find these really natural points o intersect with their daily life in order to build a quality product,1,1,2,32,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,"Even though this has been costly, the other firm has beat us with a better project. I choose to allocate any funds earmarked for this project to research in other projects.",1,1,1,55,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,40,3, , , , , , , , , , , , , ,25,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,95,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,30,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,it has to develop more and orelse we have wind up it.,2,2,2,32,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,30,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,39,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,20,4, , , , , , , , , , , , , ,39,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,30,4, , , , , , , , , , , , , ,33,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,40,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,30,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,38,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,5,4, , , , , , , , , , , , , ,47,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,70,Companies come out with similar products all the time. I would try to focus on the advantages of my product and know that there is always competition and figure out how we can maximize the advantages we have.,1,2,1,29,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,60,I think we could still proceed but maybe pivot a few elements to make it competitive,1,2,1,35,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,50,3, , , , , , , , , , , , , ,42,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,35,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,35,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,40,"If the other firm's design is truly superior, we would have to probably halt the project. The government would be the likely client of such a product, and they have the budget to obtain higher priced, higher quality products, so I would be wary of continung.",1,2,1,25,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,35,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,30,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,75,3, , , , , , , , , , , , , ,25,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,30,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,25,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,100,My company has more experience and can improve on the design of our product efficiently.,2,1,2,21,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,85,There is still 5 million left and I would go ahead with the project,2,1,2,37,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,I wouldn't know what to do. I think I would probably quit the project if I thought that our final product was going to be far less superior to the competitor's product.,1,1,1,31,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,90,i liked the views,1,2,1,32,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,33,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,85,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,34,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,It seems like continuing the project would be a waste of money considering that someone else beat us to the punch.  It looks bad that we spent 5 million with no product though.,1,2,1,30,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,70,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,38,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,20,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,26,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,3, , , , , , , , , , , , , ,28,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,44,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,0,If someone has something better I don't have much of a chance with this one.  They will go with the best.,1,1,1,64,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,"I believe with half our budget already spent and the competition already far beyond us, it would be best not to waste another 5 million on this same project. I would stop and regroup to see if we could use the remaining amount of our budget to produce a sightly different product that no one else has in operation at this time.",1,2,1,52,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,77,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,70,4, , , , , , , , , , , , , ,34,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,24,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,50,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,44,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,15,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,40,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,35,4, , , , , , , , , , , , , ,30,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,29,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,51,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,52,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,100,2, , , , , , , , , , , , , ,28,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,60,4, , , , , , , , , , , , , ,48,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,25,I don't feel very positive about proceeding because of the fact the competition has already came up with a better design and a large portion of the budget has been spent already.,2,1,1,25,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,The other company beat us to the punch and came up with a plan better than our original one. No need to proceed.,2,1,1,33,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,80,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,40,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,70,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,24,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,25,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,28,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,30,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,60,I guess I would want to go ahead with the project. It's a very difficult decision but since half of the money has already spent the best option would be to go ahead and hope to at least find a way to turn a profit so it isn't a complete loss.,1,2,1,27,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,20,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,29,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,10,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,22,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,49,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,50,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,31,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,5,I have little interest in continuing with the project because the competitor beat me to it.,1,1,1,26,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,30,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,34,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,63,"there might be a chance to get something useful from the project if i decided to continue with it; maybe the product could be improved or modified to serve a different function. however, if i quit the project, the only possible outcome would be huge losse of time and money.",1,2,1,22,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,I would investigate ways to use what we had already started to design something useful. I would not want to totally abandon the project.,1,1,1,70,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,25,I would feel like our project may not succeed being another company has made a better design than ours.,2,1,1,23,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,45,4, , , , , , , , , , , , , ,44,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,75,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,32,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,35,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,26,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,52,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,"I would NOT be willing to proceed with the project unchanged. However, I would consider it if we could find a way to salvage/use the already invested resources as the foundation for a new product and all stakeholders were on board.",1,2,1,42,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,60,"60% of me would proceed with the project because 5 million  is too much to spend to just ""quit"" despite another firm having a better design, By continuing my project will be making it more effective ""Bigger and Better""",1,1,1,28,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,49,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,80,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,42,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,29,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,30,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,44,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,40,4, , , , , , , , , , , , , ,36,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,59,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,51,"The project is more than halfway to completion, and the budget is half depleted as well.  Although bigger and perhaps more complex than the competitors product, there is a slight chance that some consumers may still want our product.",1,2,1,45,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,2, , , , , , , , , , , , , ,55,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,42,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,70,Because it's possible that the other company's product will have some glitches or hiccups and I think ours could be a good alternative if that happens.,2,1,1,43,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,4, , , , , , , , , , , , , ,33,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,20,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,64,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,0, , , , , , , , , , , , , ,43,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,"The other firm is already selling a better product, we cannot compete, any money spent from now , will be lost.",1,2,1,65,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,75,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,39,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,50,5, , , , , , , , , , , , , ,23,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,28,4, , , , , , , , , , , , , ,33,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,30,5, , , , , , , , , , , , , ,36,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,15,The other company beat us with a better product. To go forward would be a waste of time and money.,1,1,1,50,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,27,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,25,3, , , , , , , , , , , , , ,32,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,25,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,30,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,52,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,50,3, , , , , , , , , , , , , ,64,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,55,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,38,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,40,2, , , , , , , , , , , , , ,32,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,45,Spending too much money already.,2,1,1,58,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,100,2, , , , , , , , , , , , , ,69,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,40,"I would hate to quit the entire project, but would likely do so unless there was still time to make improvements in order for the design to better compete with the other company.",1,2,1,29,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,35,I would investigate to see if there is  a possibility to improving the product we were designing and the window of development and cost.,1,2,1,60,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,50,5, , , , , , , , , , , , , ,49,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,80,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,32,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,99,"We have already spent a lot of time and money, and the potential profit is very high, so we will analyze the competitor's product and improve our product with the remaining $5 million and 3 years.",1,1,1,55,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,0,We are still in development phase and the competition is already marketing a much better product. We lost in this endeavor.,1,2,1,79,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,60,3, , , , , , , , , , , , , ,20,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,20,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,22,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,25,4, , , , , , , , , , , , , ,39,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,100,3, , , , , , , , , , , , , ,34,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,We can still use the research and the funding to work on a different project. Unless we can come in at a much cheaper cost it doesn't seem wise to enter the market so late and with a lesser product.,1,2,1,36,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,60,Too much money has already been spent to simply quit and just because the others have a better design and smaller product does not mean it will run well.,2,1,1,24,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,15,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,39,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,I think if we proceed with the project we will be building a product that is substandard and will be even more so by the time it is finished. It is better to cut losses now than continue and loses millions more.,1,1,1,35,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,2,I hate to waste the time and money spent on the project but it seems foolish to continue to spend time and money on a project that will probably not break even due to superior competition.,1,2,1,41,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,15,4, , , , , , , , , , , , , ,32,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,75,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,30,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,40,4, , , , , , , , , , , , , ,21,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,"They are doing great right now, but there is still plenty of time for errors to occur.",1,2,2,36,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,15,"Because another firm as already begun marketing their similar product, I feel that they have beat us at our own game and we should desist now. The fact that they also have better attributes (better design, easier to operate) makes it an easy decision to jst quit now.",1,2,1,37,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,70,4, , , , , , , , , , , , , ,24,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,2, , , , , , , , , , , , , ,54,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,100,5, , , , , , , , , , , , , ,64,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,It is the only logical thing to do.,1,2,1,73,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,74,"There's no way that the competitor's first product is the final version that will conquer the market. We just need to retrench, rethink, and leapfrog. It's technology, and three years is a very long time.",1,2,1,49,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,4, , , , , , , , , , , , , ,42,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,85,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,33,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,70,"Just because this competing company has launched a similar product with a better design, we can take from that and improve our own product. Just because Coca Cola and McDonalds were launched first, doesn't mean that Pepsi and Burger King failed. I would cntinue with the project.",1,1,1,25,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,0,In this situation I would be inclined to cease all activity on the current project and cut our losses.,1,2,1,37,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,0,Sunk costs are sunk! Spent money is not relevant to the decision and the decision made on information now would dictate not proceeding.,1,2,1,54,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,25,"I would be reluctant to continue and would want the design team to create a better product than intended if they continue. The only thing that we have going continuing is that if we charge less for the product, then we can sell it to more.",1,2,1,33,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,0,There is no sense to continue with the product because the competition is going to make it to market with a better design first.,1,2,1,23,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,45,I would want to know additional things like could our design be changed to make it easier to operate and whether the competition's is better - it could have serious flaws software wise or something.,1,2,1,38,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,"It is extremely unlikely that my company can successfully compete against a better and cheaper product which is already on the market, so spending the additional $5M would likely result in a loss of close to $10M, rather than the loss of $5M which would ocur if the project is scrapped now.",1,2,1,47,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,0,"We've already invested 5 million into a product that's not yet complete, and there is a similar, much better product already on the market.  It would be ridiculous to throw good money after bad just to complete the project when there would be no need for t at completion.",1,2,1,48,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,80,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,35,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,20,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,37,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,60,I think if you go ahead with the project as planned you will fail but if you can halt projection until their project comes out then find their mistakes and work on your project to attack that,2,1,1,33,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,25,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,24,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,50,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,39,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,25,5, , , , , , , , , , , , , ,25,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,100,"If you quit project, 5 mil will be lost. Stick with it, but make changes to current design to be more competitive with the other company.",1,2,1,60,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,40,I am unwilling to continue on with the project we are not going to be Able to make the product at the same level of design and workability.   I cannot authorize the project continue.,1,1,1,36,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,"I would not proceed with the project, even though money had been spent, because our design was inferior compared to the competition. I would not want to throw more money at a project that is destined to fail.",1,2,1,38,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,"5 million dollars have already been spent on a project you began, you might as well see it through. You also do not know that the competition will thrive with its product; they may have issues down the road.",2,1,1,22,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,35,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,"Well, I chose 50 on the scale because it can still be remade and changed since it's only half way through development, in which case you can try to beat the competition.",2,2,1,19,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,90,3, , , , , , , , , , , , , ,35,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,"No one is going to buy this unless it is very much underpriced. It would be better to just cut the losses now, rather than spend double the money for something that won't be wanted.",1,2,1,26,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,30,"If this other product will absolutely replace every facet of the product we are working on, there is no point in continuing with ours.  If we can sit back and do damage control by retooling what we are working on to make it better by increasing the functins, decreasing the size, or somehow making it more competitive, I would definitely go ahead.",1,2,1,61,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,45,4, , , , , , , , , , , , , ,24,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,10,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,59,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,5, , , , , , , , , , , , , ,37,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,50,3, , , , , , , , , , , , , ,39,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,20,4, , , , , , , , , , , , , ,60,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,31,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,70,"We have already sunk half of the budget into the project, it does not make fiscal sense to quit the project now and lose out on 5 million dollars.",1,1,1,19,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,70,2, , , , , , , , , , , , , ,55,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,"It would depend on the ability to tweak the existing project to stand apart from the competition. If we could modify the project to stand apart, then it is worth continuing on. If we can't, then it's not worth spending the rest of the money to launch an iferior product.",1,2,1,33,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,40,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,42,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,There is a possibility that we could improve on the competitor's design in the next several years and learn from their possible mistakes.  We could then bring to market a better product than they have been selling.,1,1,1,70,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,20,I would only be willing to proceed if the project could be restructured to be as good or better than the competition.  Otherwise I would save the remaining money for a more positive project.,1,1,1,35,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,"I would continue with the process. I am sure there will be flaws with their design and since we have a prototype in process as long as we stay with in budget, I'LL continue with the project that i initiated.",2,1,1,29,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,70,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,52,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,29,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,25,We are already invested but it seems best to cut our losses.,1,2,1,26,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,80,2, , , , , , , , , , , , , ,37,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,90,2, , , , , , , , , , , , , ,26,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,70,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,28,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,50,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,32,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,63,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,0, , , , , , , , , , , , , ,44,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,0, , , , , , , , , , , , , ,28,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,79,5, , , , , , , , , , , , , ,32,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,30,"We can proceed and offer our product at a lower price to beat out competition. However, if the competition has a better design and has overall quality, I don't want our company to be known as the one that produced the cheap knockoff.",1,1,1,26,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,25,"Given the fact that another company is already out in the marketplace with a better-designed product, and my company is likely still 3 more years from completion, it doesn't make any sense to throw good money after bad in this situation.  The money could etter be spent some other way, maybe on a design that improves on what the competitor is already doing.",1,2,1,51,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,20,4, , , , , , , , , , , , , ,39,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,"There may be time to change to beat the competition so it might be worth it continuing. On the other hand, it may end up being pointless and costing the company more of a loss to continue than just calling it a quits.",1,1,1,24,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,75,1, , , , , , , , , , , , , ,30,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,1,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,34,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,61,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,23,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,I would hope that the other company is simply over selling what their product is.,1,2,1,23,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,25,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,25,5, , , , , , , , , , , , , ,29,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,2, , , , , , , , , , , , , , , , , , , , , , , , , , ,32,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,80,3, , , , , , , , , , , , , ,35,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,20,4, , , , , , , , , , , , , ,41,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,0,0, , , , , , , , , , , , , , , , , , , , , , , , , , ,38,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,85,"We spent money on this already and we are halfway there, something could happen to the competitor's design that makes the device faulty or any other negative thing. Things could go wrong for them.",1,1,1,22,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,20,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,33,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,25,3, , , , , , , , , , , , , ,33,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,I wouldn't want to waste another $5M if we can not longer compete in the market with our product. It's a tough decision.,2,1,1,26,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,i am indecisive,2,1,1,24,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,5, , , , , , , , , , , , , ,39,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,75,5, , , , , , , , , , , , , , , , , , , , , , , , , , ,37,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,25,4, , , , , , , , , , , , , ,35,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,25,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,67,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,50,3, , , , , , , , , , , , , ,23,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,40,"Another company has beat us to the punch with a better product, it may not be worth the further resources",1,1,1,32,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,10,4, , , , , , , , , , , , , ,53,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,5,5, , , , , , , , , , , , , ,30,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,5,3, , , , , , , , , , , , , ,34,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,10,I would be open to other opinions but it seems a waste to spend $5 million more when a better product is already in the market.,1,2,1,46,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,80,4, , , , , , , , , , , , , , , , , , , , , , , , , , ,48,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,30,5, , , , , , , , , , , , , ,28,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,70,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,30,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,65,2, , , , , , , , , , , , , ,33,1
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,70,"Despite the competition, we have already sunk a considerable 5 million into this project. I think it would be unwise to let that 5 million be a complete waste.",1,1,1,22,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,0,5, , , , , , , , , , , , , ,52,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,50,I'm conflicted a company beat us to it but we already spend time and money on the project,2,1,1,31,2
+1,1, , , , , , , , , , , , , , , , , , , , , , , , , , ,1,1,1,3,2,1,1,1,5,This is a difficult decision but I must quit this project due to the other firm's better design and speed at getting this to the marketplace.,1,2,1,59,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,95,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,48,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,50,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,35,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,10,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,40,1
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,30,4, , , , , , , , , , , , , ,52,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,100,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,40,1
+1,1,1,1,1,3,1,2,1,1,2,1,1,60,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,26,2
+1,1, , , , , , , , , , , , , ,1,1,1,3,2,2,1,2,1,1,1,40,5, , , , , , , , , , , , , ,53,2
+1,1,1,1,1,3,1,2,1,1,2,1,1,90,3, , , , , , , , , , , , , , , , , , , , , , , , , , ,23,2

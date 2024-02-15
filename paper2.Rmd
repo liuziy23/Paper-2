@@ -1,0 +1,184 @@
+---
+title: "Paper 2"
+author: Yanyu Wu, Ziyi Liu, Hechen Zhang
+thanks: "A replication of various aspects in this paper are available at: https://osf.io/c6wm5/"
+abstract: "Abstract.
+According to popular opinion, the main driving force behind the upgrade decision is the sunk cost. Gilad Feldman and Kin Fai Ellick Wong have suggested that when escalation is seen as an action and downgrade is seen as a non-action, participants are more likely to upgrade - even if it means continuing to engage in projects that may not be successful. This study suggests that decision makers view upgrading as a good response to a previous bad outcome, even though it may not be the best option. When we restore the experimental data, we also find that the tendency of decision makers to upgrade their commitment may be significantly affected by the clarity of information, and the decision process plays a crucial role in influencing the choice outcome. Our experimental results agree with the inferred results."
+output: pdf_document
+toc: TRUE
+
+---
+# Introduction
+In the world of project management, decision makers often have to make difficult choices about whether to continue funding a project that is likely to fail. This approach to decision making is also known as "commitment escalation", where a previous investment is maintained despite indications that the project may fail (Staw, 1976). It is critical to understand the factors that influence commitment escalation choices in order to minimize unnecessary waste of resources and improve the decision-making process.
+Although there are multiple factors that can influence decision makers' judgments, the literature on commitment escalation does not address information clarity as a key aspect affecting the decision-making process. Because of differences in the clarity and interpretability of the information, information about project failures may influence decision makers' estimates of risk and expectations of outcomes (Tversky and Kahneman, 1974). When information is unclear, decision makers may find it more difficult to determine the reality of a project, which may influence their decision whether to proceed with investment.
+Although sunk costs, personal liability, and self-justification are all associated with commitment to escalation (Arkes & Blumer, 1985; Brockner, 1992), but little is known about the exact impact of information clarity on the commitment escalation decision process. In addition, previous studies have focused on specific experimental Settings, which raises concerns about the robustness and generalizability of these results in other Settings.
+Through a series of experiments (experiments 1, 3, and 4), this study methodically investigated how decision makers' tendency to escalate commitments under different contexts is affected by the clarity of information about project failures, aiming to fill this research gap. The aim of this study is to provide new insights into information processing functions in commitment escalation selection by comparing decision behaviors under different information.
+
+# Data
+## Data Source and Methodology
+### Experiment 1
+The data from the first experiment are provided by a total of 104 undergraduate students from a university in Hong Kong who participated in exchange for partial course credit. This is a psychological study focusing on escalation of commitment, specifically investigating how individuals decide to continue or discontinue investment in a project when faced with negative feedback and a competitive threat. The study utilized a scenario in which participants, acting as vice presidents of a high-tech firm, had to decide on the future of a radar-scrambling device project after discovering that a competitor had launched a superior product. The participants were divided into two conditions: escalation-as-action, where continuing the project required active budget allocation, and de-escalation-as-action, where stopping the project required active intervention. Their willingness to proceed with the project was measured on a scale from 0 to 100, and they were asked to explain their decisions. This setup provides a controlled environment to examine how framing the decision (as either an action or inaction) influences commitment to a failing course of action. The results could offer insights into decision-making processes in business, helping leaders understand how framing and presentation of choices can impact managerial decisions and organizational outcomes.
+
+### Experiment 3
+In the third experiment, a new dimension labeled "ambiguous" was introduced into the data analysis. This experiment engaged 299 American participants from MTurk, who were recruited through TurkPrime.com. These participants were evenly distributed into three distinct groups to test the effects of different escalation framings: escalation-as-action, de-escalation-as-action, and ambiguous. While retaining similarities to the setup in Experiment 1, this iteration featured a novel approach to budget distribution. Specifically, in the escalation-as-action scenario, funding was released in two separate instances: an initial disbursement at the commencement of the project, followed by a subsequent allocation three years later to advance to the next phase. Conversely, in the de-escalation-as-action scenario, the entire project budget was pre-approved and allocated from the company’s multi-year budget.
+
+At the three-year mark, having expended half of the budgeted 10 million dollars, participants learned of a competing firm that had launched a similar yet superior product. As the decision-makers, they faced the crucial choice of whether to continue funding the remainder of the project. The ambiguous condition introduced a new dynamic, requiring participants to make a decision between continuing with the project or halting it, without explicit guidance towards action or inaction, echoing the uncertainty faced in the original study by [@arkes1985psychology]. This addition aimed to explore how ambiguity in decision-making contexts affects the propensity for escalation of commitment.
+
+## Attributes
+
+```{r setup, include=FALSE}
+# Workplace Setup
+knitr::opts_chunk$set(echo = TRUE)
+#install.packages("tidyverse")
+#install.packages("ggplot2")
+#install.packages("car")
+library(tidyverse)
+library(ggplot2)
+library(car)
+```
+
+```{r, echo=TRUE, include=TRUE, cache = FALSE, echo=FALSE}
+# import file from CSV
+alldata <- read.csv("inputs/data/action-inaction-eoc-experiment-1-data.csv", header=TRUE, fileEncoding = "UTF-8-BOM") 
+
+# calculate condition
+alldata$condition <- 0
+for (i in 1:nrow(alldata)){
+  if (!is.na(alldata$EOC1_me[i])) (alldata$condition[i] <- 1)
+  if (!is.na(alldata$EOC1_other[i])) (alldata$condition[i] <- 2)
+  if (!is.na(alldata$DEC1_me[i])) (alldata$condition[i] <- 3)
+  if (!is.na(alldata$DEC1_other[i])) (alldata$condition[i] <- 4)
+}
+
+#calcaulte age 
+alldata$age <- alldata$birth+9
+
+# some recoding to get the condition
+alldata$blankeocdec<- recode(alldata$condition, "c(1,2)=1;c(3,4)=2; else=NA")
+alldata$blankme<- recode(alldata$condition, "c(1,3)=1;c(2,4)=2; else=NA")
+alldata$condition<-factor(alldata$condition,levels = c(1,2,3,4), 
+                          labels=c("Escalation-action / Self-initiated", 
+                                   "Escalation-action / Other-initiated",
+                                   "Deescalation-action / Self-initiated",
+                                   "Deescalation-action / Other-initiated"))
+#value labels
+alldata$blankeocdec<-factor(alldata$blankeocdec,levels = c(1,2), labels=c("Escalation-action", "Deescalation-action"))
+alldata$blankme<-factor(alldata$blankme,levels = c(1,2), labels=c("Self-initiated", "Other-initiated"))
+
+# calcaulte attention checks for exclusions
+alldata$include<-(alldata$blankeocdec=="Escalation-action" & alldata$manchk2<=3) |
+  (alldata$blankeocdec=="Deescalation-action" & alldata$manchk2>=3)
+
+# including only those who passed the attention checks
+alldata<-subset(alldata, include==1)
+
+# the effects for the 'other initiated conditions' are stronger, but in this manuscript we focus on the 'self initiated' conditions.
+alldata<-subset(alldata, blankme=="Self-initiated")
+
+
+# referring the labels in the condition variable
+xlabel<-"Escalation-action" #name condition 1
+ylabel<-"Deescalation-action" #name condition 2
+
+factorlabel<-"blankeocdec" 
+measurelabel<-"esc1"  
+xlabelstring<-"Action framing" 
+ylabelstring<-"Escalation of commitment (0-100)"   
+```
+
+```{r, echo=FALSE, include=FALSE, echo=FALSE}
+#Set your alpha level and confidence interval
+alpha<-0.05
+ConfInt<-0.95
+
+#Alternative hypothesis: specify "two.sided" (for x<>y), "less" (for x<y) or "greater" (for x>y)
+H1<-"two.sided"
+
+bootstraps<-2000
+
+options(scipen=20) #disable scientific notation for numbers smaller than x (i.e., 10) digits (e.g., 4.312e+22)
+
+#Remove other conditions in your datafile (only keep groups specified above)
+alldata<-subset(alldata, alldata[[factorlabel]]==xlabel|alldata[[factorlabel]]==ylabel)
+
+x.alldata<-subset(alldata, alldata[[factorlabel]]==xlabel)
+y.alldata<-subset(alldata, alldata[[factorlabel]]==ylabel)
+x<-x.alldata[[measurelabel]]
+y<-y.alldata[[measurelabel]]
+
+# Calculate 95% CI
+
+bsci <- function(data.frame, group.var=match(factorlabel,names(alldata)), dv.var=match(measurelabel,names(alldata)), difference=FALSE, pooled.error=FALSE, conf.level=ConfInt) {
+  data <- subset(alldata, select=c(group.var, dv.var))
+ fact <- factor(data[[1]], levels = c(xlabel,ylabel))
+ dv <- data[[2]]
+ J <- nlevels(fact)
+ N <- length(dv)
+    ci.mat <- matrix(,J,3, dimnames=list(levels(fact), c('lower', 'mean', 'upper')))
+    ci.mat[,2] <- tapply(dv, fact, mean)
+    n.per.group <- tapply(dv, fact, length)
+    if(difference==TRUE) diff.factor= 2^0.5/2 else diff.factor=1
+    if(pooled.error==TRUE) {
+  for(i in 1:J) {
+   moe <- summary(lm(dv ~ 0 + fact))$sigma/(n.per.group[[i]])^0.5 * qt(1-(1-conf.level)/2,N-J) * diff.factor
+   ci.mat[i,1] <- ci.mat[i,2] - moe
+   ci.mat[i,3] <- ci.mat[i,2] + moe
+   }
+  }
+ if(pooled.error==FALSE) {
+   for(i in 1:J) {
+    group.dat <- subset(data, data[1]==levels(fact)[i])[[2]]
+    moe <- sd(group.dat)/sqrt(n.per.group[[i]]) * qt(1-(1-conf.level)/2,n.per.group[[i]]-1) * diff.factor
+    ci.mat[i,1] <- ci.mat[i,2] - moe
+    ci.mat[i,3] <- ci.mat[i,2] + moe
+  }
+ }
+    ci.mat
+}
+
+#change matrix output from functions to dataframe, add CI from between, add labels and means 
+ci.sum<-as.data.frame(bsci(alldata, group.var=match(factorlabel,names(alldata)), dv.var=match(measurelabel,names(alldata)), difference=TRUE))
+ci.sum[[factorlabel]] <- c(xlabel,ylabel)
+ci.sum[[measurelabel]] <- c(mean(x),mean(y))
+
+sd1<-sd(x) #standard deviation of group 1
+sd2<-sd(y) #standard deviation of group 2
+n1 <- length(x) #number of individuals
+n2 <- length(y) #number of individuals
+m_diff<-mean(x)-mean(y)
+```
+# Results
+## Experiment 1 Figure 1
+Figure \@ref(fig:fig1) is a replication of Figure 1 in Experiment 1 of the original paper, and it presents a violin plot alongside means and 95% confidence intervals (CIs) comparing two conditions: "Escalation-action" and "Deescalation-action." This visual representation combines the distribution of data points with a summary statistic of the mean and the variability, which are 95% CIs for each condition. Mean escalation levels, depicted by dots, reveal higher scores for the "Escalation-action" (average of 57.21) compared to the "Deescalation-action" (average of 39.8).  The 95% confidence interval indicates that if we were to take multiple random samples from the same population, 95% of the sample means would fall within this interval. This provides a quantified measure of the data's credibility. As a result, the violin plot's contour reveals the broader distributions of escalation actions, signifying a higher commonality of actions within that range.
+```{r fig1, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Means and 95% CI, violin plot"}
+# Assuming 'factorlabel' holds the name of the column for grouping/factor variable
+# and 'measurelabel' holds the name of the column for the measurement variable.
+
+# Update the data frames to use character representations directly
+ci.sum$factor_as_char <- as.character(ci.sum[[factorlabel]])
+alldata$factor_as_char <- as.character(alldata[[factorlabel]])
+
+# Create the plot
+ggplot(ci.sum, aes(x=factor_as_char, y=get(measurelabel), group=1)) +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1, size=1) +
+  geom_point(size=2) +
+  geom_violin(data=alldata, aes(x=factor_as_char, group=factor_as_char), alpha=0) +
+  ylab(ylabelstring) + 
+  xlab(xlabelstring) + 
+  theme_bw(base_size=14) +
+  theme(panel.grid.major.x = element_blank())
+```
+
+## Experiment 1 Figure 4
+Figure \@ref(fig:fig2) with categories replicates the figure 4 in the original paper experiment 1, and it provides a quick visual indication of the data's distribution, highlighting any potential skewness by showing the medians' positions relative to the interquartile ranges (IQR). It compares participants' willingness to continue with a project across two scenarios — "Escalation-action" and "Deescalation-action" — on a commitment scale from 0 (not at all willing) to 100 (completely willing). The plot reveals a wider IQR for "Deescalation-action," suggesting a greater diversity in the participants' responses. In contrast, the median — represented by the line within each box — is higher for "Escalation-action," indicating a general tendency for participants in this scenario to be more willing to escalate their commitment. Furthermore, "Escalation-action" extends to have a higher maximum value, signifying that some participants are particularly inclined to increase their commitment level when compared to those in the "Deescalation-action" group.
+```{r fig2, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.width=6, dpi=300, fig.cap="Boxplot"}
+ggplot(alldata, aes(x=.data[[factorlabel]], y=.data[[measurelabel]])) +
+  geom_boxplot() +
+  ylab(ylabelstring) +
+  xlab(xlabelstring) +
+  theme_bw(base_size=14) +
+  theme(panel.grid.major.x = element_blank())
+```
+
+# Conclusion
+In conclusion, through a series of experiments, this study explores how clarity of project failure information affects decision makers' commitment escalation tendency. By simulating several cases of clarity of failed information (ambiguity and clarity), the study shows how clarity of information affects decision makers' behavior of whether to continue investing in a failed project. We found that the way information is delivered can have a significant impact on the actions of decision makers. Specifically, when faced with failure, unclear information seems to reinforce the tendency to commit to escalation. This may be because unclear information creates cognitive uncertainty, raising the likelihood that policymakers will continue to invest in the hope of seeing a reversal. In addition, we now know that decision makers are influenced by a range of psychological traits when making decisions, including loss aversion. These factors, together with information clarity, affect the decision-making process. Although the study provides insightful information, there are certain limitations. For example, experimental designs may be too simple to accurately reflect the complexity of decisions in the real world. The diversity of the sample of participants may limit the scope of application of the findings. In addition, the experiment did not take into account other variables that may influence commitment escalation, such as personal experience and cultural background. To improve the generality of the findings, a larger group of participants should be investigated in future studies. In addition, in order to more accurately simulate real-world decision-making environments, more complex experimental situations must be created. An important area of future research is to examine how these results can be applied to real-world project management scenarios to enhance the decision-making process. With more research, we will be able to better understand the ways in which clarity of information and other relevant factors influence the decision-making process. This understanding will enable us to create more successful project management tools and strategies.
